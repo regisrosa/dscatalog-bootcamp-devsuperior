@@ -4,6 +4,8 @@ import Navbar from './core/assets/styles/components/Navbar';
 import Home from './pages/Home';
 import Admin from './pages/Home/Admin';
 import Catalog from './pages/Home/Catalog';
+import ProductDetails from './pages/Home/Catalog/components/ProductDetails'
+
 
 
 
@@ -14,8 +16,11 @@ const Routes = () => (
             <Route path="/" exact>
                 <Home/>
             </Route>
-            <Route path="/catalog">
+            <Route path="/products" exact>
                 <Catalog/>
+            </Route>
+            <Route path="/products/:productId">
+                <ProductDetails/>
             </Route>
             <Route path="/admin">
                 <Admin/>
